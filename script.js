@@ -3,6 +3,10 @@ const resetBtn = document.querySelector('.resetBtn')
 const black = document.querySelector('.bwColors')
 const random = document.querySelector('.randomColors')
 const eraser = document.querySelector('.eraser');
+let resizeModal = document.querySelector('.resizeModal')
+let gridSlider = document.getElementById('gridSlider')
+let gridNumber = document.querySelector('.gridNumber')
+let submitResize = document.querySelector('.submitResize')
 let cell;
 
 function createGrid(rows, columns) {
@@ -44,14 +48,29 @@ eraser.addEventListener('click', () => {
 
 createGrid(16, 16)
 
+let createNewGrid = (newRows, newColumns) => {
+    newRows = submitRows.addEventListener('click', () => {
+        return rowsInput.value
+    })
+    newColumns = submitColumns.addEventListener('click', () => {
+        return columnsInput.value
+    })
+    createGrid(newRows, newColumns)
+}
+
 resetBtn.addEventListener('click', () => {
-    grid.textContent = '';
+    resizeModal.style.display = 'block'
     let resetColor = document.querySelectorAll('.drawColor')
     resetColor.forEach((square) => {
         square.style.backgroundColor = '';
         square.classList.remove('drawColor')
     })
-    rows = prompt('How many rows would you like for your sketch?')
-    columns = prompt('How many columns would you like for your sketch?')
-    createGrid(rows, columns)
+    submitResize.addEventListener('click', () => {
+        rows = gridSlider.value
+        columns = gridSlider.value
+        gridNumber.textContent =`${gridSlider.value} x ${gridSlider.value}`
+        grid.textContent = '';
+        createGrid(rows, columns)
+    })
 })
+

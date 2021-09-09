@@ -38,7 +38,16 @@ button:hover {
 button:active {
     font-weight: bold;
 }
-
+.resizeModal {
+    display: none;
+}
+.gridNumber {
+    padding: 0px;
+    margin: 10px 40%;
+    background-color: rgb(2, 57, 173);
+    color: #fff;
+    border: 2px solid rgb(0, 0, 0);
+}
 .mainContainer {
     display: flex;
     background-color: rgb(114, 114, 114);
@@ -75,7 +84,7 @@ button:active {
         padding: 2px;
     }
     .btns {
-        margin: 5px 20%;
+        margin: 5px 10%;
         padding: 10px;
     }
     .mainContainer {
