@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title class="title">Etch-A-Sketch</title>
+</head>
+<body>
+    <main class="mainBackground">
+        <h1 class="heading">Etch-A-Sketch</h1>
+        <div class="btns">
+            <button class="resetBtn">Reset Area</button>
+            <div class="resizeModal">
+                <p class="gridNumber">16 x 16</p>
+                <input type="range" name="grid_size" id="gridSlider" class="slider" value="16" min="1" max="65">
+                <button class="submitResize">+</button>
+            </div>
+            <button class="bwColors">Black</button>
+            <button class="randomColors">Random</button>
+            <button class="eraser">Eraser</button>
+        </div>
+        <div class="mainContainer">
+            <div class="mainGrid">
+
+            </div>
+        </div>
+        
+    </main>
+</body>
+
+<script src="script.js"></script>
+</html>
